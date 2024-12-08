@@ -46,8 +46,8 @@ ArbResult set_value(uint8_t *input, size_t len)
 // Función para obtener el valor (ejemplo previo)
 ArbResult get_value(uint8_t *input, size_t len)
 {
-
-  uint8_t *slot_address = (uint8_t *)(STORAGE_SLOT__value + 0); // Get the slot address
+  // Eliminamos el + 0, para poder ir sumando el offset
+  uint8_t *slot_address = (uint8_t *)(STORAGE_SLOT__value); // Get the slot address
 
   storage_load_bytes32(slot_address, buf_out);
   if (bebi32_is_zero(buf_out))

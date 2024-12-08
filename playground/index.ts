@@ -30,7 +30,7 @@ const publicClient = createPublicClient({
 })
 
 // https://sepolia.arbiscan.io/address/const CONTRACT_ADDRESS = "0x46be8751225be83d7a9b97fec0214c53795d8477"
-const CONTRACT_ADDRESS = "0x3e8e7892e77be3cced3a30c13531be6f293c8f31"
+const CONTRACT_ADDRESS = "0xf961b9488087e33892b6e522f0e150235b677d66"
 
 async function write() {
   const result = await client.writeContract({
@@ -84,5 +84,5 @@ async function getTotalDonations() {
 
 donate(); // Prueba de donación
 getTotalDonations(); // Prueba de lectura
-read()
+//read()
 // write()
