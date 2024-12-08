@@ -44,7 +44,7 @@ const CardDonative = ({ title, meta, progress }: CardDonativeProps) => {
     
         try {
           sendTransaction({
-                to: '0x1234567890abcdef1234567890abcdef12345678', // Reemplaza por la dirección correcta
+                to: '0x77bf99d25f597fa6886d45955f377141be0849c6', // Reemplaza por la dirección correcta
                 value: parseEther("0.005"), // 0.01 ETH en Wei
             });
         } catch (error) {

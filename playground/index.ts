@@ -47,7 +47,7 @@ async function read() {
   const result = await publicClient.readContract({
     abi: ABI,
     address: CONTRACT_ADDRESS,
-    functionName: "hello_world",
+    functionName: "get_total_donations",
   })
 
   console.debug(`Contract: ${result}`)
@@ -84,5 +84,5 @@ async function getTotalDonations() {
 
 donate(); // Prueba de donación
 getTotalDonations(); // Prueba de lectura
-//read()
+read()
 // write()
