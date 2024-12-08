@@ -3,6 +3,8 @@
 #include "../stylus-sdk-c/include/storage.h"
 #include "../stylus-sdk-c/include/string.h"
 
+#define DONATION_AMOUNT 5000000000000000  // 0.005 Albitrum en la unidad más pequeña
+
 #define STORAGE_SLOT__value 0x0
 
 /**
@@ -19,6 +21,31 @@ ArbResult inline _return_success_bebi32(bebi32 const retval)
   return res;
 }
 
+// Función para procesar la donación
+ArbResult donate(uint8_t *input, size_t len)
+{
+  uint8_t mesaage_value[32] = {0}; // BEBI para almacenar msg.value
+  msg_value(mesaage_value);
+
+  uint8_t recipient_address[] = {
+        0x31, 0xDA, 0xED, 0xB2, 0x4D, 0x8E, 0x04, 0xEA, 0x46, 0x2C,
+        0x17, 0x28, 0x46, 0xAB, 0x1D, 0x96, 0xDF, 0x6E, 0xF8, 0x21
+    };
+
+ call_contract(
+        recipient_address,  // Dirección de destino
+        NULL,               // Sin datos de llamada
+        0,                  // Longitud de datos de llamada
+        mesaage_value,              // Monto en wei
+        UINT64_MAX,         // Límite de gas máximo
+        &len    // Longitud de los datos devueltos
+    );
+
+  return _return_success_bebi32(mesaage_value);
+
+}
+
+// Función para almacenar un valor (para ejemplos previos)
 ArbResult set_value(uint8_t *input, size_t len)
 {
 
@@ -38,6 +65,7 @@ ArbResult set_value(uint8_t *input, size_t len)
   return _return_success_bebi32(input);
 }
 
+// Función para obtener el valor (ejemplo previo)
 ArbResult get_value(uint8_t *input, size_t len)
 {
 
@@ -51,31 +79,35 @@ ArbResult get_value(uint8_t *input, size_t len)
   return _return_success_bebi32(buf_out);
 }
 
+// Función de ejemplo
 ArbResult hello_world(uint8_t *input, size_t len)
 {
   return _return_short_string(Success, "Hola desde 42 Madrid!!");
 }
+
+// Handler para procesar la función del contrato
 int handler(size_t argc)
 {
-  // Save the function calldata
   uint8_t argv[argc];
-  read_args(argv); // 4 bytes for selector + function arguments
+  read_args(argv);  // Leer los argumentos enviados a la función
 
-  // Define the registry array with registered functions
+  // Registro de funciones disponibles (en este caso solo "donate", "set_value", "get_value")
   FunctionRegistry registry[] = {
+      {to_function_selector("donate()"), donate},
       {to_function_selector("set_value(uint256)"), set_value},
       {to_function_selector("get_value()"), get_value},
       {to_function_selector("hello_world()"), hello_world},
-      // Add more functions as needed here
   };
 
-  uint32_t signature = *((uint32_t *)argv); // Parse function selector
+  uint32_t signature = *((uint32_t *)argv);  // Analizamos el selector de función
 
-  // Call the function based on the signature
+  // Llamamos a la función correspondiente
   ArbResult res = call_function(registry,
                                 sizeof(registry) / sizeof(registry[0]),
-                                signature, argv + 4, argc - 4 // Exclude the selector from calldata
+                                signature, argv + 4, argc - 4 // Excluyendo el selector
   );
+
+  // Escribir el resultado de la llamada
   return (write_result(res.output, res.output_len), res.status);
 }
 

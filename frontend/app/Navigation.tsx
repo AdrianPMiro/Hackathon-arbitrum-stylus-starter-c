@@ -12,9 +12,15 @@ export default function Navigation() {
         <figure className="max-w-[3rem]">
           <Image className="w-full" src={asset_logo} alt="" />
         </figure>
-        <strong className="text-lg">LemonFeed</strong>
+        <strong className="text-lg">Microdonative</strong>
       </nav>
+      <nav className="flex items-center gap-4">
+      <ul className="flex gap-4 me">
+        <li className="text-lg">About us</li>
+        <li className="text-lg">Contact</li>
+      </ul>
       <ConnectButton />
+      </nav>
     </nav>
   )
 }
