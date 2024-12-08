@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-
 import asset_logo from "@/assets/logo.png"
 import ConnectButton from "./ConnectButton"
 
@@ -15,9 +14,9 @@ export default function Navigation() {
         <strong className="text-lg">Microdonative</strong>
       </nav>
       <nav className="flex items-center gap-4">
-      <ul className="flex gap-4 me">
-        <li className="text-lg">About us</li>
-        <li className="text-lg">Contact</li>
+      <ul className="flex gap-4 mx-2">
+        <li className="text-lg"><a href="/about-us" className="border border-gray-800 rounded-lg bg-transparent px-4 py-2 text-gray-700 hover:bg-gray-100 transition">About Us</a></li>
+        <li className="text-lg"><a href="#" className="border border-gray-800 rounded-lg bg-transparent px-4 py-2 text-gray-700 hover:bg-gray-100 transition">Contact</a></li>
       </ul>
       <ConnectButton />
       </nav>

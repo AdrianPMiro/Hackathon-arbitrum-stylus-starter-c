@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ethers": "^6.13.4",
+    "sweetalert2": "^11.14.5",
     "viem": "^2.21.53"
   },
   "devDependencies": {
