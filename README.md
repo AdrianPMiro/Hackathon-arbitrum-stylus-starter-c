@@ -30,7 +30,7 @@ Con Transparent Transfer, cada transacción es pública, inmutable y auditada au
 
 Creamos una aplicación descentralizada (DApp) que permite realizar donaciones a organizaciones benéficas, gubernamentales o empresariales con total confianza. Nuestro sistema se basa en contratos inteligentes desplegados en la red Arbitrum Sepolia, asegurando transacciones rápidas, seguras y sin intermediarios.
 
-
+Pequeño video explicativo del proyecto: https://drive.google.com/file/d/1uBqmafrfCo68Oqfw3OkSLXl-0Y6klCk-/view?usp=sharing
 
 ### 💡 Características Clave
 
