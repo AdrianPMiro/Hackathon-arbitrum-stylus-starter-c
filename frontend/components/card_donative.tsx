@@ -12,9 +12,6 @@ interface CardDonativeProps {
   contract_address: `0x${string}`;
 }
 
-//0x72bf8509525fb6f4d9e3981b9ed1409fcb6a83fd
-//0x5e9a891a8055e8a925b30683b91ebc39b37beac5
-//0x8e43d6bc80bdb1df7d36a0cd2b61dbcaa332304d
 const CardDonative = ({
   title,
   meta,

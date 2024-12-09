@@ -20,16 +20,6 @@ El objetivo de la Hackaton es lograr la creación de una Dapp (Aplicación desce
 
 La idea y planteamiento de nuestro proyecto consiste en un concepto que ofrezca total confianza y transparencia, con la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en situaciones de necesidad de una manera más segura y transparente a la tradicional mediante transferencias, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y honestidad en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instántaneas.
 
-<img src="https://media.discordapp.net/attachments/1315448195731423335/1315449015617327166/image.png?ex=675772dd&is=6756215d&hm=c16d972b31951541837003dea931c046a1f99b217507ac43a3abe17cdb7ab102&=&format=webp&quality=lossless&width=501&height=602" width="500">
-
-<img src="https://media.discordapp.net/attachments/1315448195731423335/1315450234024755211/image.png?ex=675773ff&is=6756227f&hm=2eac8958ec47115a964c6472e26c87384774f18ef48f99818955be0721d6f529&=&format=webp&quality=lossless&width=1147&height=602" width="500">
-
-<img src="https://media.discordapp.net/attachments/1315448195731423335/1315450562078052445/image.png?ex=6757744d&is=675622cd&hm=09ca2e06e1854db0272499c4dbb26a126f029370e4f4dc669a7b8c2660473d33&=&format=webp&quality=lossless&width=966&height=602" width="500">
-
-<img src="https://media.discordapp.net/attachments/1315448195731423335/1315454582092206123/image.png?ex=6757780c&is=6756268c&hm=546a7648a8d54a60f7546a58bf42dbc906babfba88afaeeecd0a518dbb27e134&=&format=webp&quality=lossless&width=576&height=602" width="500">
-
-
-
 -----------------------------------------------------
 
 ## 4. Transcurso del proyecto:
@@ -47,14 +37,16 @@ Primero de todo, instalar dependencias:
 - rust, cargo y rustup
 - LLVM (con wasm-ld): Disponible desde la versión 15 (llvm@15)
 
-```git clone https://github.com/AdrianPMiro/Hackathon-arbitrum-stylus-starter-c.git```
+Luego, clonar el siguiente repositorio:
+
+```git clone https://github.com/AdrianPMiro/Hackathon-arbitrum-stylus-starter-c.git``` &&
 
 
 
 
 -----------------------------------------------------
 
-## 5. Mejoras:
+## 6. Mejoras:
 
 ¿Si tuviéramos más tiempo, qué haríamos?
 
@@ -66,13 +58,13 @@ Por último, otra de las ideas que habíamos pensado para nuestro proyecto que n
 
 -----------------------------------------------------
 
-## 6. Conclusión ✨
+## 7. Conclusión ✨
 
 Para nosotros ha sido realmente interesante llevar a cabo el proyecto, nos ha resultado una jornada intensa donde hemos puesto a prueba una amplia variedad de capacidades, empezando por la organización y la capacidad mental al adentrarnos en un área en el que teníamos escaso conocimiento previo, por lo que a su vez también estamos satisfechos de haber tenido la oportunidad de haber podido aprender tal cantidad de nuevos conceptos y posibilidades que ofrece el campo de Blockchain. Todos los miembros del equipo estamos de acuerdo de que para nosotros esta ha sido una experiencia muy enriquecedora y que sin duda será de mucha utilidad en un futuro dado que realizamos proyectos en áreas similares con las que podemos compatibilizar lo aprendido durante la Hackaton.
 
 
 -----------------------------------------------------
 
-## 7. Equipo
+## 8. Equipo
 
 Este proyecto ha sido creado por Adrián Pedrero Miró, Manuel Cuesta Barrios y Nicolás Rosón Muñoz en el campus de 42 Madrid durante la Hackaton "Learn & Earn" llevada por Lemon, centrada en el ámbito de Blockchain y sus diferentes utilidades.
