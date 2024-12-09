@@ -30,6 +30,8 @@ Con Transparent Transfer, cada transacción es pública, inmutable y auditada au
 
 Creamos una aplicación descentralizada (DApp) que permite realizar donaciones a organizaciones benéficas, gubernamentales o empresariales con total confianza. Nuestro sistema se basa en contratos inteligentes desplegados en la red Arbitrum Sepolia, asegurando transacciones rápidas, seguras y sin intermediarios.
 
+
+
 ### 💡 Características Clave
 
 
@@ -42,6 +44,8 @@ Creamos una aplicación descentralizada (DApp) que permite realizar donaciones a
 
 
 La idea y planteamiento de nuestro proyecto consiste en un concepto que ofrezca total confianza y transparencia, con la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en situaciones de necesidad de una manera más segura y transparente a la tradicional mediante transferencias, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y honestidad en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instantáneas.
+
+Usuario ➔ Donación ➔ Contrato Inteligente ➔ ONG
 
 ### 🛤️ Transcurso del proyecto:
 
@@ -92,12 +96,12 @@ Con esto, ya debería estar funcionando el proyecto en la dirección http://loca
 ### 🚀 Configuraciones Avanzadas (Red Arbitrum)
 
 
-Si deseas probar el proyecto en la red de Arbitrum Sepolia, sigue estos pasos:
-
-Configura Arbitrum en tu billetera MetaMask.
-Despliega el contrato inteligente en la red de Arbitrum tres veces (una por cada proyecto).
-Actualiza las direcciones de los contratos inteligentes en:
+Si deseas probar el proyecto en la red de Arbitrum Sepolia, tendras que hacer estas configuraciónes:
+1. Configura Arbitrum en tu billetera MetaMask.
+2. Despliega el contrato inteligente en la red de Arbitrum tres veces (una por cada proyecto).
+3. Actualiza las direcciones de los contratos inteligentes en:
 frontend/components/carousel/carousel.tsx
+4. Remplazar en el .env la clave privada.
 
 ### 🌍 Casos de Uso Reales
 
