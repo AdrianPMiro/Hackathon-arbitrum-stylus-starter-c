@@ -10,45 +10,43 @@ En la Hackaton nuestra meta era aprender sobre el temario que se proponía en el
 
 -----------------------------------------------------
 
-## 2. Objectivo de nuestro proyecto / ¿En qué consiste? 🎯
+## 2. Objetivo de la Hackaton
 
-Nuestro principal objetivo es poder adquirir el máximo número de conocimientos sobre Blockchain durante el transcurso de la Hackaton y complementarlos con nuestros conocmientos en otras áreas para poder aplicarlos en la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en sitauciones de necesidad de una manera más segura y transparente a la tradicional, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y confianza en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instántaneas, lo cual es una de las ideas principales de nuestro proyecto. Para incentivar a que el usuario done una mayor cantidad, hemos planteado un sistema de objetivos, diferente para cada destino de donación, en el que, cuando el donante ofrece la aportación económica necesaria para poder cumplir con él, obtiene la posibilidad de adquirir un NFT como agradecimiento por cumplir con el objetivo.
-
------------------------------------------------------
-
-## 3. Código de los contratos:
-
-El código utiliza el SDK de Stylus para implementar un manejador (handler) que permite registrar y ejecutar funciones basadas en identificadores únicos llamados selectors. Estas funciones están diseñadas para interactuar con un almacenamiento persistente, manejar datos de entrada y salida, y proporcionar respuestas claras al usuario.
-
-La función principal, handler, actúa como punto de entrada y se encarga de identificar qué función ejecutar analizando el selector incluido en la llamada. Para lograr esto, utiliza un registro (FunctionRegistry) que asocia cada selector con su implementación correspondiente. Este enfoque facilita la modularidad y escalabilidad del sistema, permitiendo agregar nuevas funciones fácilmente.
-
-Entre las funciones implementadas, destacan:
-
-set_value: Permite guardar un valor de 32 bytes en un espacio de almacenamiento persistente. Si el tamaño del valor no es el esperado, devuelve un mensaje de error indicando un problema con la longitud.
-get_value: Recupera el valor almacenado previamente en el mismo espacio. Si no se encuentra un valor, devuelve un mensaje indicando que no ha sido configurado.
-hello_world: Una función básica que devuelve un mensaje de saludo fijo, utilizada principalmente como demostración.
-El código también incluye utilidades generales para manejar resultados y optimizar el uso de memoria, como el uso de un buffer predefinido para evitar asignaciones dinámicas y funciones auxiliares como _return_success_bebi32 para construir respuestas estandarizadas. Estas prácticas aseguran un funcionamiento eficiente en entornos con recursos limitados, como los basados en blockchain.
-
-En conjunto, este código demuestra cómo implementar un sistema de manejo de funciones que interactúan con almacenamiento persistente y responden dinámicamente a las solicitudes del usuario. Es un ejemplo práctico y extensible para entornos basados en Stylus SDK.
+El objetivo de la Hackaton es lograr la creación de una Dapp (Aplicación descentralizada) aplicando conocimientos de Blockchain. La idea es conseguir realizarlo en grupos entre compañeros, y entre los requisitos de la inscripción se encuentra que no se necesitan conocimientos previos de Blockchain, por lo que otro de los objetivos de la Hackaton es que los estudiantes aprendan los conocimientos necesarios de este campo para poder realizar el proyecto.
 
 -----------------------------------------------------
 
-## 4. Playground
+## 3. Sobre nuestro proyecto / ¿En qué consiste? 🎯
+
+Nuestro principal objetivo es poder adquirir el máximo número de conocimientos sobre Blockchain durante el transcurso de la Hackaton y complementarlos con nuestros conocmientos en otras áreas para poder aplicarlos en la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en sitauciones de necesidad de una manera más segura y transparente a la tradicional, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y confianza en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instántaneas, lo cual es una de las ideas principales de nuestro proyecto.
+
+<img src="https://media.discordapp.net/attachments/1315448195731423335/1315449015617327166/image.png?ex=675772dd&is=6756215d&hm=c16d972b31951541837003dea931c046a1f99b217507ac43a3abe17cdb7ab102&=&format=webp&quality=lossless&width=501&height=602" width="500">
+
+<img src="https://media.discordapp.net/attachments/1315448195731423335/1315450234024755211/image.png?ex=675773ff&is=6756227f&hm=2eac8958ec47115a964c6472e26c87384774f18ef48f99818955be0721d6f529&=&format=webp&quality=lossless&width=1147&height=602" width="500">
+
+<img src="https://media.discordapp.net/attachments/1315448195731423335/1315450562078052445/image.png?ex=6757744d&is=675622cd&hm=09ca2e06e1854db0272499c4dbb26a126f029370e4f4dc669a7b8c2660473d33&=&format=webp&quality=lossless&width=966&height=602" width="500">
+
+<img src="https://media.discordapp.net/attachments/1315448195731423335/1315454582092206123/image.png?ex=6757780c&is=6756268c&hm=546a7648a8d54a60f7546a58bf42dbc906babfba88afaeeecd0a518dbb27e134&=&format=webp&quality=lossless&width=576&height=602" width="500">
 
 
-El código index.ts código demuestra cómo interactuar con un contrato inteligente desplegado en la red de pruebas Arbitrum Sepolia, utilizando la librería viem. Se definen dos clientes: uno público para consultar datos sin modificar el estado del contrato y otro privado, configurado con una clave privada extraída de las variables de entorno, para realizar transacciones que alteran el estado.
-
-La interacción con el contrato se basa en un ABI simplificado que incluye funciones como hello_world (que devuelve un mensaje de texto) y set_value (para almacenar un valor). La función read usa el cliente público para llamar a hello_world, mientras que write utiliza el cliente privado para invocar set_value con un argumento de tipo entero.
-
-Al ejecutarse, el código llama a read por defecto, lo que permite obtener un mensaje del contrato inteligente. La función write está definida pero no se ejecuta automáticamente, y sirve para enviar transacciones firmadas. Este ejemplo es útil para entender los principios básicos de interacción con contratos inteligentes en Ethereum y redes compatibles.
 
 -----------------------------------------------------
 
-## 5. Mejoras
+## 4. Transcurso del proyecto:
+
+Para proceder con el proyecto empezamos planteando diferentes ideas hasta que nos cuadrara una que encajara con el tiempo y los requisitos pedidos por la Hackaton. En un principio, la idea del proyecto distaba de las capacidades que teníamos, pero durante el transcurso del proyecto realizamos una intensa investigación para poder estar al nivel necesario para plasmar la idea que teníamos en mente a código. Para empezar, nos repartimos las tareas del proyecto entre los miembros en función de nuestros puntos fuertes, de tal manera que Adrián Pedrero se encargó de la realización del Backend de la página web, Manuel Cuesta se ocupó de realizar el Frontend de la página y Nicolás Rosón se encargó de parte del Frontend, del diseño de la página web y de la realización del archivo README.
+
+-----------------------------------------------------
+
+## 5. Mejoras:
 
 ¿Si tuviéramos más tiempo, qué haríamos?
 
 Lo más destacable era la implementación de una mayor cantidad de objetivos y ampliar las posibilidades de donaciones para que el usuario disponga de más opciones en las que poder realizar las donaciones para ayudar a otros colectivos necesitados.
+
+Otro de los cambios que habríamos hecho en caso de haber dispuesto de más tiempo es mejorar el diseño de la página web, para la que teníamos ideas en mente más ambiciosas que por falta de tiempo no pudimos implementar.
+
+Por último, otra de las ideas que habíamos pensado para nuestro proyecto que no pudimos implementar era un incentivo para las donaciones, que consistía en la obtención de un NFT al cumplir con una serie de objetivos a la hora de realizar donaciones, como podía ser donar lo suficiente para permitir la plantación de 10 árboles, por ejemplo.
 
 -----------------------------------------------------
 
