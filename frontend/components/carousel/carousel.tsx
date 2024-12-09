@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './styles.css';
-// import required modules
+// import extra modules for out proyect ( and make it cool)
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import CardDonative from "@/components/card_donative"
 

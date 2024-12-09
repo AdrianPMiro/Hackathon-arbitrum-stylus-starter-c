@@ -62,6 +62,14 @@ Por último, ejecutar el siguiente comando para iniciar el servidor:
 Con esto, ya debería estar funcionando el proyecto en la dirección http://localhost:3000/
 
 
+Configuraciones avanzadas:
+
+Si queremos probarlo en la red de Arbitrum, tendremos que seguir unos pasos muy específicos:
+
+1. Configurar la red de Arbitrum en MetaMask
+2. Hacer deploy del contrato inteligente en la red de Arbitrum 3 veces (una por cada proyecto)
+3. Cambiar las direcciones de los contratos en el archivo `frontend/components/carousel/carousel.tsx' por las direcciones de los contratos desplegados en la red de Arbitrum
+
 -----------------------------------------------------
 
 ## 6. Mejoras:

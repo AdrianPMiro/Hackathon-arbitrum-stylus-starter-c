@@ -54,8 +54,8 @@ const CardDonative = ({
 
     try {
       sendTransaction({
-        to: `${contract_address}`, // Reemplaza por la dirección correcta
-        value: parseEther("0.005"), // 0.01 ETH en Wei
+        to: `${contract_address}`,
+        value: parseEther("0.005"), 
       });
     } catch (error) {
       console.error("Error en la transacción:", error);
