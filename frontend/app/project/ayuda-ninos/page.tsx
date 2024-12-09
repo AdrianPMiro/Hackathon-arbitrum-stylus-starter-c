@@ -2,11 +2,13 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation"
 import "./App.css";
 
 const App: React.FC = () => {
-  const handleDonation = () => {
-    window.location.href = "https://www.ayudaaninosp.org/donar";
+  const router = useRouter();
+  const handleRouter = () => {
+    router.push("/")
   };
 
   return (
@@ -27,7 +29,7 @@ const App: React.FC = () => {
         <p>
           Muchas gracias.{" "}
         </p>
-        <button onClick={handleDonation}>Donar Ahora</button>
+        <button onClick={handleRouter}>Volver A la Donación</button>
       </header>
     </div>
   );
