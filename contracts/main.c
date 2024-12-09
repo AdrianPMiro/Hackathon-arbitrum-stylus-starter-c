@@ -24,6 +24,24 @@ ArbResult inline _return_success_bebi32(bebi32 const retval)
 }
 
 // Función para almacenar un valor (para ejemplos previos)
+/**
+ * Función: set_value
+ * -------------------
+ * Almacena un valor específico en el almacenamiento del contrato inteligente.
+ *
+ * Parámetros:
+ *  - input: puntero al valor de 32 bytes que se desea almacenar.
+ *  - len: longitud de los datos de entrada (debe ser exactamente 32 bytes).
+ *
+ * Comportamiento:
+ *  1. Verifica que la longitud de entrada sea de 32 bytes.
+ *  2. Guarda el valor en la dirección predeterminada de almacenamiento (STORAGE_SLOT__value).
+ *  3. Escribe el valor en el almacenamiento permanente.
+ *
+ * Retorna:
+ *  - `Success`: si el valor se almacena correctamente.
+ *  - `Failure`: si ocurre un error, como longitud de entrada inválida.
+ */
 ArbResult set_value(uint8_t *input, size_t len)
 {
 
@@ -44,6 +62,24 @@ ArbResult set_value(uint8_t *input, size_t len)
 }
 
 // Función para obtener el valor (ejemplo previo)
+/**
+ * Función: get_value
+ * -------------------
+ * Recupera el valor acumulado actual almacenado en el contrato.
+ *
+ * Parámetros:
+ *  - input: no se utiliza en esta función (puede ser NULL).
+ *  - len: longitud de los datos de entrada (se espera que sea 0).
+ *
+ * Comportamiento:
+ *  1. Accede al almacenamiento en la dirección predeterminada (STORAGE_SLOT__value).
+ *  2. Carga el valor almacenado en un buffer de salida.
+ *  3. Si el valor no ha sido configurado previamente, retorna un error.
+ *
+ * Retorna:
+ *  - `Success`: con el valor almacenado si existe.
+ *  - `Failure`: si el valor no ha sido configurado (ej. "NotSet").
+ */
 ArbResult get_value(uint8_t *input, size_t len)
 {
   // Eliminamos el + 0, para poder ir sumando el offset
@@ -65,6 +101,29 @@ ArbResult hello_world(uint8_t *input, size_t len)
 
 
 // Función para procesar la donación
+
+/**
+ * Función: donate
+ * ----------------
+ * Procesa una donación en el contrato inteligente, actualiza el valor acumulado 
+ * y transfiere el monto al destinatario.
+ *
+ * Parámetros:
+ *  - input: no se utiliza en esta función (puede ser NULL).
+ *  - len: longitud de los datos de entrada (se espera que sea 0).
+ *
+ * Comportamiento:
+ *  1. Obtiene el valor enviado en la transacción (msg.value).
+ *  2. Recupera el valor acumulado actual del almacenamiento.
+ *  3. Suma msg.value al valor acumulado.
+ *  4. Actualiza el almacenamiento con el nuevo valor acumulado.
+ *  5. Transfiere msg.value a una dirección de destinatario predeterminada.
+ *
+ * Retorna:
+ *  - `Success`: con el valor acumulado actualizado si todo se ejecuta correctamente.
+ *  - `Failure`: en caso de errores, como longitud de entrada inválida, overflow al sumar, 
+ *               fallo en el almacenamiento o en la transferencia.
+ */
 ArbResult donate(uint8_t *input, size_t len)
 {
     uint8_t message_value[32] = {0}; // BEBI para almacenar msg.value
@@ -86,14 +145,15 @@ ArbResult donate(uint8_t *input, size_t len)
     // Guardar el nuevo valor acumulado usando `set_value`
     ArbResult set_result = set_value((uint8_t *)accumulated_result.output, 32); // Cast a (uint8_t *)
     if (set_result.status != Success) {
-        return _return_short_string(Failure, "StorageError");
+        return _return_short_string(Failure, "StorageError"); // Manejo de error por falta de espacio.
     }
 
-    // Transferir el valor al destinatario
+    // Casteamos la dirección de destino a formato (uint8_t *)  
     uint8_t recipient_address[] = {
         0x31, 0xDA, 0xED, 0xB2, 0x4D, 0x8E, 0x04, 0xEA, 0x46, 0x2C,
         0x17, 0x28, 0x46, 0xAB, 0x1D, 0x96, 0xDF, 0x6E, 0xF8, 0x21};
 
+    // Transferir el valor al destinatario
     uint8_t result = call_contract(
         recipient_address,  // Dirección de destino
         NULL,               // Sin datos de llamada

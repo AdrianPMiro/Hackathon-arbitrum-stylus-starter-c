@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import Navegation from "@/app/Navigation"
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -27,6 +27,8 @@ const AboutUs = () => {
   }, []);
 
   return (
+    <>
+    <Navegation />
     <div className="about-us-container bg-gradient-to-r from-blue-200 to-blue-500 p-8 rounded-md shadow-md">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Section */}
@@ -90,6 +92,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

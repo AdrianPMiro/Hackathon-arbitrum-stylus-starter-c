@@ -1,0 +1,52 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-image: url('https://comafors.org/wp-content/uploads/2020/01/1-940x530.jpg'); /* Cambia según tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.App-header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 5% auto;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+p, ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #218838;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

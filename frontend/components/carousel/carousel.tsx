@@ -31,13 +31,13 @@ export default function Carousel() {
       >
         <SwiperSlide>
           <div>
-          <CardDonative title={"Fondo Alimento para niños"} meta={4000} progress={800} />
+          <CardDonative title={"Fondo Alimento para niños"} meta={4000} progress={800} information='ayuda-ninos '/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
-          <CardDonative title={"Ayuda a Valencia"} meta={250000} progress={100000} />
-          </div>
+          <CardDonative title={"Ayuda a Valencia"} meta={250000} progress={100000} information=''/>
+          </di>
         </SwiperSlide>
         <SwiperSlide>
           <div>

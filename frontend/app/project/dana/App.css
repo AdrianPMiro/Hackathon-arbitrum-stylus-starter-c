@@ -1,0 +1,53 @@
+/* src/App.css */
+.App {
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2024/11/ayuda-afectados-dana-4257565.jpg?tf=3840x');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  .App-header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5% auto;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p, ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  button {
+    background: #ff6600;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #e55500;
+  }
+  
+  a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
