@@ -32,16 +32,34 @@ Para proceder con el proyecto empezamos planteando diferentes ideas hasta que no
 
 Primero de todo, instalar dependencias:
 
-- Brew (Mac) / Chocolatey (Windows)
-- Docker (Docker Desktop)
-- rust, cargo y rustup
-- LLVM (con wasm-ld): Disponible desde la versión 15 (llvm@15)
+- Brew (Mac y linux) / Chocolatey (Windows)
+- Docker / Docker Desktop
+- rust, cargo, rustup
+- nodejs, npm y nextjs
+- hardhat
+- LLVM
 
 Luego, clonar el siguiente repositorio:
 
-```git clone https://github.com/AdrianPMiro/Hackathon-arbitrum-stylus-starter-c.git``` &&
+```git clone https://github.com/AdrianPMiro/Hackathon-arbitrum-stylus-starter-c.git && cd Hackathon-arbitrum-stylus-starter-c``` 
 
+Una vez clonado, ejecutar el siguiente comando para instalar las dependencias necesarias:
 
+```npm install```
+
+Para ejecutar el proyecto, primero compilar el contrato inteligente:
+
+```make```
+
+Luego, ejecutar el siguiente comando para desplegar el contrato inteligente:
+
+```make deploy```
+
+Por último, ejecutar el siguiente comando para iniciar el servidor:
+
+```make frontend```
+
+Con esto, ya debería estar funcionando el proyecto en la dirección http://localhost:3000/
 
 
 -----------------------------------------------------
