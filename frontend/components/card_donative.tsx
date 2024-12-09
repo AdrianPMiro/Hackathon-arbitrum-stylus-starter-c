@@ -9,13 +9,18 @@ interface CardDonativeProps {
   meta: number;
   progress: number;
   information: string;
+  contract_address: `0x${string}`;
 }
 
+//0x72bf8509525fb6f4d9e3981b9ed1409fcb6a83fd
+//0x5e9a891a8055e8a925b30683b91ebc39b37beac5
+//0x8e43d6bc80bdb1df7d36a0cd2b61dbcaa332304d
 const CardDonative = ({
   title,
   meta,
   progress,
   information,
+  contract_address
 }: CardDonativeProps) => {
   const router = useRouter();
   const { address, isConnected, chain } = useAccount();
@@ -52,7 +57,7 @@ const CardDonative = ({
 
     try {
       sendTransaction({
-        to: "0x77bf99d25f597fa6886d45955f377141be0849c6", // Reemplaza por la dirección correcta
+        to: `${contract_address}`, // Reemplaza por la dirección correcta
         value: parseEther("0.005"), // 0.01 ETH en Wei
       });
     } catch (error) {

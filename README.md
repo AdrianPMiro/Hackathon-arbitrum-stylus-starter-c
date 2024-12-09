@@ -18,7 +18,7 @@ El objetivo de la Hackaton es lograr la creación de una Dapp (Aplicación desce
 
 ## 3. Sobre nuestro proyecto / ¿En qué consiste? 🎯
 
-Nuestro principal objetivo es poder adquirir el máximo número de conocimientos sobre Blockchain durante el transcurso de la Hackaton y complementarlos con nuestros conocmientos en otras áreas para poder aplicarlos en la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en sitauciones de necesidad de una manera más segura y transparente a la tradicional, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y confianza en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instántaneas, lo cual es una de las ideas principales de nuestro proyecto.
+La idea y planteamiento de nuestro proyecto consiste en un concepto que ofrezca total confianza y transparencia, con la creación de una página web que permita al usuario realizar donaciones a determinados colectivos en situaciones de necesidad de una manera más segura y transparente a la tradicional mediante transferencias, gracias a la implementación de Blockchain. Esto implicaría una mayor sensación de seguridad y honestidad en el usuario al conocer que sus donaciones van a ser totalmente transparentes e instántaneas.
 
 <img src="https://media.discordapp.net/attachments/1315448195731423335/1315449015617327166/image.png?ex=675772dd&is=6756215d&hm=c16d972b31951541837003dea931c046a1f99b217507ac43a3abe17cdb7ab102&=&format=webp&quality=lossless&width=501&height=602" width="500">
 
@@ -35,6 +35,22 @@ Nuestro principal objetivo es poder adquirir el máximo número de conocimientos
 ## 4. Transcurso del proyecto:
 
 Para proceder con el proyecto empezamos planteando diferentes ideas hasta que nos cuadrara una que encajara con el tiempo y los requisitos pedidos por la Hackaton. En un principio, la idea del proyecto distaba de las capacidades que teníamos, pero durante el transcurso del proyecto realizamos una intensa investigación para poder estar al nivel necesario para plasmar la idea que teníamos en mente a código. Para empezar, nos repartimos las tareas del proyecto entre los miembros en función de nuestros puntos fuertes, de tal manera que Adrián Pedrero se encargó de la realización del Backend de la página web, Manuel Cuesta se ocupó de realizar el Frontend de la página y Nicolás Rosón se encargó de parte del Frontend, del diseño de la página web y de la realización del archivo README.
+
+-----------------------------------------------------
+
+## 5. ¿Cómo hacerlo funcionar?
+
+Primero de todo, instalar dependencias:
+
+- Brew (Mac) / Chocolatey (Windows)
+- Docker (Docker Desktop)
+- rust, cargo y rustup
+- LLVM (con wasm-ld): Disponible desde la versión 15 (llvm@15)
+
+```git clone https://github.com/AdrianPMiro/Hackathon-arbitrum-stylus-starter-c.git```
+
+
+
 
 -----------------------------------------------------
 
